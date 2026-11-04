@@ -1,0 +1,25 @@
+[project]
+name = "vrptw-lab"
+version = "0.1.0"
+description = "VRPTW на бенчмарке Solomon: OR-tools против ALNS с адаптивным выбором операторов"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "ortools>=9.10",
+    "pandas>=2.2",
+    "scipy>=1.13",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vrptw"]
